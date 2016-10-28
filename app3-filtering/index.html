@@ -1,9 +1,22 @@
-<html>
-	<body>
-		Something
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-	</body>
+<html ng-app = "myApp">
+    <body ng-controller = "myController">
+        Something
+        <input ng-model = "filterName.name" />
+        <select ng-model="filterName.dateEmployed">
+            <option value ="">---</option>
+
+            <option value ="2014">2014</option>
+            <option value ="2015">2015</option>
+        </select>
+        <div ng-repeat = "person in employees | filter: filterName">
+            <span><strong>{{person.name}}</strong></span>
+            <span>{{person.email}}</span>
+            <span>{{person.dataEmployed}}</span>
+            <span>{{person.phone}}</span>
+        </div>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="app.js"></script>
+        <script src="controller.js"></script>
+        <script src="service.js"></script>
+    </body>
 </html>
