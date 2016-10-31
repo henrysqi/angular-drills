@@ -1,5 +1,12 @@
 <html ng-app="apiApp">
-	<body>
+	<body ng-controller="mainCtrl">
+		
+		<div ng-repeat="person in people">
+			{{person.name}}
+			{{person.mass}}
+			{{person.eye_color}}
+			{{person.birth_year}}
+		</div>
 		
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
